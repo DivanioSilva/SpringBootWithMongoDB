@@ -1,0 +1,13 @@
+> docker pull mongodb
+
+> docker ps
+
+b07599e429fb mongo "docker-entrypoint..." 35 minutes ago Up 35 minutes 0.0.0.0:27017->27017/tcp musing_stallman
+
+> root@b07599e429fb:/# mongo
+
+// create a new db with name mongoDbTest
+> use mongoDbTest  <-- dbName
+
+// Scheme configuration.
+> db.createUser({user: 'ds', pwd: 'secretPassword', roles: [{ role: 'readWrite', db:'mongoDbTest'}]})
