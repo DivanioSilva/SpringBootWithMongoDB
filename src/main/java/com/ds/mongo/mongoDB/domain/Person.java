@@ -12,6 +12,8 @@ public class Person {
     private String id;
     private String name;
     private Integer age;
+    private String nationality;
+    private Parent parent;
 
     public Person() {
     }
@@ -52,7 +54,25 @@ public class Person {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", nationality='" + nationality + '\'' +
+                ", parent=" + parent +
                 '}';
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public Parent getParent() {
+        return parent;
+    }
+
+    public void setParent(Parent parent) {
+        this.parent = parent;
     }
 
     @Override
